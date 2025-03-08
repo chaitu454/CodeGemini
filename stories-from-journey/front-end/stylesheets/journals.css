@@ -1,0 +1,209 @@
+/* Basic styling for the page */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.create-btn {
+    background: #3f8857;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+.journal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.journal-entry {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.journal-entry img {
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.journal-content {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.journal-stats {
+    position: absolute;
+    right: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Modal and overlay styling */
+.modal,
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark background */
+    z-index: 1000;
+}
+
+.modal.active,
+.overlay.active {
+    display: block;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+    /* No shadow effect */
+    overflow-y: auto;
+    /* Allows scroll if content overflows */
+    height: 400px;
+    /* Fixed height */
+    max-height: 80vh;
+    /* Optional: limits max height */
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Modal form styling */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal form input,
+.modal form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Create Journal Modal */
+#journalModal {
+    height: 400px;
+    /* Full form with multiple fields */
+}
+
+/* Rate Modal */
+#rateModal {
+    height: 120px;
+    /* Smaller height for simple rating input */
+}
+
+/* Share Modal */
+#shareModal {
+    height: 120px;
+    /* Slightly bigger than rate modal */
+}
+
+/* Styling the delete button with trash bin icon */
+.delete-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #e75050;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn i {
+    margin-right: 8px;
+    /* Space between icon and text */
+    width: 16px;
+    height: 16px;
+    background: url('https://img.icons8.com/ios/452/trash.png') no-repeat center center;
+    background-size: contain;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}

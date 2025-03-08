@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Journal</title>
+    <link rel="stylesheet" href="stylesheets/journals.css">
+    <script src="scripts/journals.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <button class="create-btn" onclick="toggleModal('journalModal')">➕ Create Journal</button>
+    </div>
+    <div class="journal-list"></div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="journalModal" class="modal">
+        <button class="close-btn" onclick="toggleModal('journalModal')">&times;</button>
+        <form>
+            <label>Title:</label>
+            <input type="text" placeholder="Enter title">
+            <label>Description:</label>
+            <textarea placeholder="Enter description"></textarea>
+            <label>Notes:</label>
+            <textarea placeholder="Enter notes"></textarea>
+            <label>Upload Image:</label>
+            <input type="file">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <div id="rateModal" class="modal">
+        <button class="close-btn" onclick="toggleModal('rateModal')">&times;</button>
+        <form>
+            <label>Rate this Journal:</label>
+            <input type="number" min="1" max="5" placeholder="Enter rating (1-5)">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="shareModal" class="modal">
+        <button class="close-btn" onclick="toggleModal('shareModal')">&times;</button>
+        <form>
+            <label>Share this Journal:</label>
+            <input type="text" placeholder="Enter email or username">
+            <button type="submit">Share</button>
+        </form>
+    </div>
+</body>
+
+</html>
